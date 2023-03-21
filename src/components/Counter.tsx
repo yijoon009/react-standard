@@ -26,7 +26,7 @@ function Counter() {
         // 웬만해서 직접 count 접근하지 마
         // setCount(count + 1);
 
-        setCount((prevState) => prevState + 1);
+        setCount((prevState) => prevState + 1); //prevStats나 prevValue랑 똑같아
     };
 
     const onDecrease = () => {
