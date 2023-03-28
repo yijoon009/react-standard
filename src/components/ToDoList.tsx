@@ -108,6 +108,9 @@ function TodoList() {
             alert("할 일을 입력하세요");
             return;
         }
+        // push는 원본 배열을 조작하는데
+        // concat은 원본 배열을 복사해서 새로운 값을 리턴
+        // concat은 불변성 유지 가능
         setList((prevList) => prevList.concat(todo));
         setTodo("");
     };
