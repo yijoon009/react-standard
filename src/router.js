@@ -15,6 +15,7 @@ const router = createBrowserRouter([
         errorElement: <NotFoundPage />,
         // 권한처리 용이하게 하기 위함 (root에서 권한처리하고 밑으로 내려가기 편하게)
         children: [
+            // children을 사용하기 위해선 Outlet이 필수
             {
                 path: "/calculator",
                 element: <Calculator />,
