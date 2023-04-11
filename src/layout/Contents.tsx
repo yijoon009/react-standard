@@ -1,9 +1,5 @@
 import styled from "styled-components";
-
-import Popup from "@/components/Popup";
-import LiveClock from "@/components/LiveClock";
-// import TodoList from "@/components/ToDoList2";
-import TodoList from "@/components/ToDoList";
+import { Outlet } from "react-router-dom";
 
 const ContentsContainer = styled.main`
     height: 100%;
@@ -17,9 +13,9 @@ function Contents() {
     // view
     return (
         <ContentsContainer>
-            {/* <Popup content="리액트 스터디 (5회차)" btnTitle="확인" /> */}
-            {/* <LiveClock /> */}
-            <TodoList />
+            {/* // 부모 path로부터 children에 명시된 컴포넌트들이
+            // Outlet에 렌더링 된다 */}
+            <Outlet />
         </ContentsContainer>
     );
 }
