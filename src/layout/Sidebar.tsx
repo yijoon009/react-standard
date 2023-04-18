@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+import { useLoginState } from "@/global/loginState";
 const SidebarContainer = styled.div`
     position: fixed;
     top: 0;
@@ -20,6 +20,8 @@ const SidebarContainer = styled.div`
  * @description 사이드바 컴포넌트
  */
 function Sidebar() {
+    const { login } = useLoginState();
+
     // view
     return (
         <SidebarContainer>
@@ -37,6 +39,10 @@ function Sidebar() {
                 <li>
                     <Link to="to-do-list">to-do-list</Link>
                 </li>
+                <li>
+                    <Link to="input">input</Link>
+                </li>
+                <li>{login.userId}</li>
             </ul>
         </SidebarContainer>
     );

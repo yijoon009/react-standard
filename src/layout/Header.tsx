@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useLoginState } from "@/global/loginState";
 
 type Props = {
     title: string;
@@ -16,11 +17,14 @@ const HeaderContainer = styled.header`
  * @See https://www.google.com
  */
 function Header({ title, description }: Props) {
+    // global state
+    const { login } = useLoginState();
+
     // view
     return (
         <HeaderContainer>
-            <h2>{title}</h2>
-            <h2>{description}</h2>
+            <h2>{login.userId}</h2>
+            {/* <h2>{description}</h2> */}
         </HeaderContainer>
     );
 }
