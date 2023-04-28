@@ -42,6 +42,9 @@ function Sidebar() {
                 <li>
                     <Link to="input">input</Link>
                 </li>
+                <li>
+                    <Link to="board">board</Link>
+                </li>
                 <li>{login.userId}</li>
             </ul>
         </SidebarContainer>
