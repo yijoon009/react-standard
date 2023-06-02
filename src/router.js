@@ -8,6 +8,7 @@ import LiveClock from "@/components/LiveClock";
 import TodoList from "@/components/ToDoList";
 import Input from "./components/Input";
 import Board from "./components/Board";
+import Login from "./components/Login";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "/board",
                 element: <Board />,
+            },
+            {
+                path: "/login",
+                element: <Login />,
             },
         ],
     },
