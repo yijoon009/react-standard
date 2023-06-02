@@ -120,18 +120,30 @@ type User = {
  * @description 로그인 컴포넌트
  */
 function Login() {
+
+    const {register, handleSubmit, watch, formState : {errors}} = useForm();
+
+    const onSubmit = (data:any) => {
+        console.log(data)
+    }
+
     // view
     return (
         <Wrapper>
             <Container>
-                <Form>
+                {/* 유효성 검사를 form으로 하면 엔터키 눌러도 필수값 입력 안되면 submit 되는거 막아줄 수 있음 */}
+                <Form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                         <label>ID</label>
                         <input
                             type="text"
                             className="form-control"
                             placeholder="Enter userId"
+                            {...register("userId", { required: true })}
                         />
+                        {/* errors.@@@에서 @@@는 register 안에입력한 name이랑 동일해야함 */}
+                        {/*{errors.userId && <Error>아이디는 필수입력값입니다.</Error>}*/}
+                        {errors.userId && <span>This field is required</span>}
                     </div>
                     <div className="mb-3">
                         <label>Password</label>
@@ -139,9 +151,13 @@ function Login() {
                             type="password"
                             className="form-control"
                             placeholder="Enter userPw"
+                            {...register("userPw", { required: true })}
+                            required={true}
                         />
+                        {errors.userPw && <Error>비밀번호는 필수입력값입니다.</Error>}
                     </div>
                     <div className="d-grid">
+                        {/* form 태그 안에있는 button에서 type="submit"이면 엔터누른거랑 동일(onclick이벤트 안걸어줘도 됨) */}
                         <button type="submit" className="btn btn-primary">
                             Submit
                         </button>
