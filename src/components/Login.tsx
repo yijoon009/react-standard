@@ -131,7 +131,6 @@ function Login() {
     return (
         <Wrapper>
             <Container>
-
                 {/* 유효성 검사를 form으로 하면 엔터키 눌러도 필수값 입력 안되면 submit 되는거 막아줄 수 있음 */}
                 <Form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
