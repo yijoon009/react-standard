@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 function NotFoundPage() {
     const navigate = useNavigate();
 
-
     const onBack = () => {
         navigate(-1);
     };
