@@ -14,6 +14,7 @@ function NotFoundPage() {
             <button onClick={onBack}>back</button>
         </>
     );
+    
 }
 
 
