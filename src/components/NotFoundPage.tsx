@@ -8,7 +8,7 @@ function NotFoundPage() {
     const onBack = () => {
         navigate(-1);
 
-        
+
     };
     return (
 
