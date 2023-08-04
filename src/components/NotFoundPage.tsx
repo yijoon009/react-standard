@@ -9,8 +9,6 @@ function NotFoundPage() {
         navigate(-1);
 
 
-
-
     };
     return (
 
