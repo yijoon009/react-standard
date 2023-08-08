@@ -7,9 +7,6 @@ function NotFoundPage() {
     const navigate = useNavigate();
     const onBack = () => {
         navigate(-1);
-
-
-        
     };
     return (
 
