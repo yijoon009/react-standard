@@ -14,15 +14,6 @@ function NotFoundPage() {
             <button onClick={onBack}>back</button>
         </>
     );
-
-
-
-
-
-
 }
 
-
 export default NotFoundPage;
-
-
