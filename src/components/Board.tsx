@@ -10,6 +10,7 @@ const CheckboxLabel = styled.label`
     padding: 5px;
 `;
 
+
 type CheckboxItem = {
     label: string;
     checked: boolean;
